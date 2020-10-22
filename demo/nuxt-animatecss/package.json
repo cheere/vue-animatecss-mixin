@@ -1,0 +1,34 @@
+{
+  "name": "nuxt-animatecss",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "copyres": "node ../template/copyres nuxt",
+    "devprod": "node config/build devprod generate",
+    "devbuild": "node config/build devprod build",
+    "prodbuild": "node config/build prodProd build",
+    "prodgen": "node config/build prodProd generate",
+    "export": "invalid nuxt export",
+    "serve": "invalid nuxt serve",
+    "start": "node config/dev && npm run start_development",
+    "dev": "node config/dev && npm run dev_development",
+    "dev_development": "nuxt",
+    "start_development": "nuxt start",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "yarn lint:js"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "nuxt": "2.14.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "webpack-merge": "^5.2.0"
+  }
+}

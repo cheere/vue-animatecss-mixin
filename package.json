@@ -1,0 +1,19 @@
+
+{
+  "name": "vue-animatecss-mixin",
+  "version": "1.0.0",
+  "description": "Udesk link access mode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "udesk"
+  ],
+  "author": "srxboys (https://github.com/srxboys)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cheere/udesk-js-link.git"
+  }
+}
