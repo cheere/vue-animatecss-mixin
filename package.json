@@ -2,18 +2,20 @@
 {
   "name": "vue-animatecss-mixin",
   "version": "1.0.0",
-  "description": "Udesk link access mode",
+  "description": "Vue/Nuxt use Animate.css",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "udesk"
+    "vue",
+    "nuxt",
+    "Animate.css"
   ],
   "author": "srxboys (https://github.com/srxboys)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cheere/udesk-js-link.git"
+    "url": "git@github.com:cheere/vue-animatecss-mixin.git"
   }
 }
