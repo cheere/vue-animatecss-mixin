@@ -1,0 +1,12 @@
+@import './footer.css';
+@import './elevator.css';
+@import './home.css';
+
+/* 鼠标手 */
+.cursor {
+  cursor: pointer;
+}
+
+:root {
+  --color-a: #f3f3f3;
+}

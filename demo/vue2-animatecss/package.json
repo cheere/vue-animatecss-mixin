@@ -6,15 +6,18 @@
     "copyres": "node ../template/copyres vue",
     "copy": "node config/copy-animate",
     "dev": "npm run copy development && npm run cli_serve",
-    "test": "npm run copy test && npm run cli_build_test",
+    "docs": "node config/docs",
+    "page": "npm run copy page && npm run cli_build_page",
     "build": "npm run copy production && npm run cli_build",
     "cli_serve": "vue-cli-service serve",
     "cli_build": "vue-cli-service build",
-    "cli_build_test": "vue-cli-service build --mode test",
+    "cli_build_page": "vue-cli-service build --mode page && npm run docs",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "core-js": "^3.6.5",
+    "normalize.css": "^8.0.1",
     "vue": "2.6.11"
   },
   "devDependencies": {

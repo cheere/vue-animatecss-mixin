@@ -14,7 +14,7 @@ const AnimateCssFrom = '../../../index.js'
 /**
  * @name target file
  */
-const AnimateCssPath = '../utils/mixins/animate-css.js'
+const AnimateCssPath = '../src/utils/mixins/animate-css.js'
 
 /**
  * copy npm-package to this.nuxt/utils/mixins/animate-css.js

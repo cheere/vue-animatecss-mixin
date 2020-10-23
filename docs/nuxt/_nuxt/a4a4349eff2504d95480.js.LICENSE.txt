@@ -1,0 +1,19 @@
+/*!
+ * 
+ *  Version 1.0.0
+ *  Pack by srxboys on 2020-10-23 16:36:41
+ *  Copyright © 2020 xxx.All Rights Reserved
+ * 
+ */
+
+/*!
+ * vue-client-only v2.0.0
+ * (c) 2019-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * vue-no-ssr v1.1.1
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */

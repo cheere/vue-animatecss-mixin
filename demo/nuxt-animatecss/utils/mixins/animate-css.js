@@ -11,7 +11,7 @@ const AnimateCssMixin = {
      * @param {[string]} defaultClass 默认class
      */
     animateAddEndListener(target) {
-      target.addEventListener('animationend', e => {
+      target.addEventListener('animationend', () => {
         const classList = target.classList || []
         const newList = []
         for (let i = 0; i < classList.length; i++) {

@@ -1,0 +1,13 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "copy": "npm run copy_vue && npm run copy_nuxt ",
+    "copy_vue": "node copyres vue",
+    "copy_nuxt": "node copyres vue"
+  },
+  "devDependencies": {
+    "fs-extra": "^9.0.1"
+  }
+}

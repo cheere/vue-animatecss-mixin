@@ -1,0 +1,19 @@
+/*!
+  * vue-router v3.4.7
+  * (c) 2020 Evan You
+  * @license MIT
+  */
+
+/*!
+ * 
+ *  Version 1.0.0
+ *  Pack by srxboys on 2020-10-23 16:36:41
+ *  Copyright © 2020 xxx.All Rights Reserved
+ * 
+ */
+
+/*!
+ * Vue.js v2.6.12
+ * (c) 2014-2020 Evan You
+ * Released under the MIT License.
+ */

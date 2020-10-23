@@ -6,11 +6,12 @@
     "copyres": "node ../template/copyres nuxt",
     "devprod": "node config/build devprod generate",
     "devbuild": "node config/build devprod build",
-    "prodbuild": "node config/build prodProd build",
-    "prodgen": "node config/build prodProd generate",
+    "pagebuild": "node config/build page build",
     "export": "invalid nuxt export",
     "serve": "invalid nuxt serve",
     "start": "node config/dev && npm run start_development",
+    "docs": "node config/docs",
+    "page": "node config/build page generate && npm run docs",
     "dev": "node config/dev && npm run dev_development",
     "dev_development": "nuxt",
     "start_development": "nuxt start",
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "normalize.css": "^8.0.1",
     "nuxt": "2.14.0"
   },
   "devDependencies": {

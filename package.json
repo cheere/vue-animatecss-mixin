@@ -5,6 +5,11 @@
   "description": "Vue/Nuxt use Animate.css",
   "main": "index.js",
   "scripts": {
+    "copy": "cd ./demo/template && npm run copy",
+    "page_vue": "cd ./demo/vue2-animatecss && npm run page",
+    "page_nuxt": "cd ./demo/nuxt-animatecss && npm run page",
+    "page_base": "npm run page_vue && npm run page_nuxt",
+    "page": "npm run copy && npm run page_base",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

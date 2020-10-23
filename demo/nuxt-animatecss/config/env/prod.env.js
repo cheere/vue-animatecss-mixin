@@ -1,12 +1,12 @@
 'use strict'
 module.exports = {
-  prodProd: { // 测试同学打包
-    NODEENV: 'prodProd',
-    BASE_URL: '/api/pc', // 服务器地址
+  page: { 
+    NODEENV: 'page',
+    BASE_URL: '/api/pc',
   },
 
   production: {
     NODEENV: 'production',
-    BASE_URL: '/api/pc', // 正式服务器地址
+    BASE_URL: '/api/pc',
   },
 }

@@ -5,10 +5,6 @@ const {configVersion, configCurrentTime, configBanner} = require('./config/util.
 const GLOB_ENV = require('./config/env')
 const {copyACFile} = require('./config/copy-animate')
 
-// 图片资源 - 添加时间戳
-const DateTime = new Date().getTime()
-const BuildFilenames = '[contenthash:7]_' + DateTime + '.[ext]'
-
 const Env = process.env || {NODE_ENV: 'production'}
 const EnvDevelopment = Env.NODE_ENV || 'production'
 
@@ -19,7 +15,24 @@ const NUXT_DEV_PROD = EnvDevelopment === 'development' ? 'development'
 const deploy = NUXT_DEV_PROD.replace(/\ +/g, '') // 去掉空格方法
 const Config = GLOB_ENV[deploy]
 
+// 图片资源 - 添加时间戳
+const DateTime = new Date().getTime()
+const BuildFilenames = '[contenthash:7]_' + DateTime + '.[ext]'
+
+const IsPage = deploy === 'page'
+const RouterBase =
+IsPage 
+? {
+    router: {
+      base: '/nuxt/'
+    }
+  }
+: {}
+
 export default {
+
+  // https://www.nuxtjs.cn/faq/github-pages
+  ...RouterBase,
 
   // https://zh.nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config/#how-environment-variables-work
   env: {
@@ -62,6 +75,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~assets/css/main.css',
     'animate.css',
   ],
   /*

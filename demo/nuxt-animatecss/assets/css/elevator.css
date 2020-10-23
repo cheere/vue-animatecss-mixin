@@ -1,0 +1,27 @@
+.elevator_list {position: fixed; z-index: 500; height: auto; right: 10%; display: none;}
+
+.elevator_list .elevator_item {display: flex; padding-top: 10px; position: relative;}
+.elevator_list .elevator_item:first {padding-top: 0px;}
+.elevator_list .elevator_item .el_li_totop_icon {background-image: url(../../assets/img/el_top_icon.png);}
+/* .elevator_list .elevator_item .el_li_contact_icon {background-image: url(../../assets/img/el_contact_icon.png);} */
+
+.elevator_list .elevator_item .el_li_p_wx_icon {display: none;}
+.elevator_list .elevator_item .el_li_p_wx_icon {position: absolute; left: -186px; top: 0; width: 186px; height: 234px;}
+.elevator_list .elevator_item .el_li_p_wx_icon img {width: 186px; height: 234px;}
+
+/** pc / iPad **/
+@media only screen and (min-width: 882px) {
+  .elevator_list {width: 58px; bottom: 200px;}
+  .elevator_list .elevator_item.el_p {display: inherit;}
+  .elevator_list .elevator_item .el_li_icon {width: 58px; height: 58px; background-size: 58px;}
+
+  .elevator_list .elevator_item .el_li_totop_icon:hover {background-image: url(../../assets/img/el_top_icon_select.png);}
+  /* .elevator_list .elevator_item .el_li_contact_icon:hover {background-image: url(../../assets/img/el_contact_icon_select.png);} */
+}
+
+/** iPhone **/
+@media only screen and (max-width: 881px) {
+  .elevator_list {width: 1.25rem; bottom: 150px;}
+  .elevator_list .elevator_item.el_p {display: none;}
+  .elevator_list .elevator_item .el_li_icon {width: 1.25rem; height: 1.25rem; background-size: 1.25rem;}
+}
