@@ -8,6 +8,6 @@
     "copy_nuxt": "node copyres vue"
   },
   "devDependencies": {
-    "fs-extra": "^9.0.1"
+    "fs-extra": "*"
   }
 }

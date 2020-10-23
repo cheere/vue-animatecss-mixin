@@ -14,7 +14,11 @@
     "dev_page_nuxt": "cd ./demo/nuxt-animatecss && npm run devpage",
     "dev_page_base": "npm run dev_page_vue && npm run dev_page_nuxt",
     "devpage": "npm run copy && npm run dev_page_base && node page dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "---": "---------------------",
+    "test_dev_vue": "cd ./demo/vue2-animatecss && npm run test",
+    "test_dev_nuxt": "cd ./demo/nuxt-animatecss && npm run test",
+    "test_base": "npm run test_dev_vue && npm run test_dev_nuxt",
+    "test": "npm run copy && npm run dev_page_vue && npm run test_dev_nuxt"
   },
   "keywords": [
     "vue",
@@ -26,5 +30,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:cheere/vue-animatecss-mixin.git"
+  },
+  "devDependencies": {
+    "fs-extra": "*"
   }
 }
