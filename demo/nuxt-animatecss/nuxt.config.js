@@ -24,7 +24,7 @@ const RouterBase =
 IsPage 
 ? {
     router: {
-      base: '/nuxt/'
+      base: '/vue-animatecss-mixin/nuxt/'
     }
   }
 : {}

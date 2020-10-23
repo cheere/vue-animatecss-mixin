@@ -8,7 +8,7 @@ function resolve (dir) {
 
 module.exports = {
   // https://cli.vuejs.org/zh/config/#publicpath
-  publicPath: isPage ? "/vue/" : "/",
+  publicPath: isPage ? "/vue-animatecss-mixin/vue/" : "/",
 
   // https://cli.vuejs.org/zh/config/#productionsourcemap
   productionSourceMap: isProd ? false : true,
