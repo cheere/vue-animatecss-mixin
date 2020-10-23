@@ -75,7 +75,7 @@ if (arg === 'nuxt') {
   targetMixins += vueName + '/utils/mixins'
   targetPage += vueName + '/pages'
 
-  targetMixinOfAnimateCss += vueName + '/mixins/animate-css.js'
+  targetMixinOfAnimateCss += vueName + '/utils/mixins/animate-css.js'
 }
 
 const delArrayPath = [targetAssets, targetComponent, targetMixins, targetPage]

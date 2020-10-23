@@ -9,7 +9,11 @@
     "page_vue": "cd ./demo/vue2-animatecss && npm run page",
     "page_nuxt": "cd ./demo/nuxt-animatecss && npm run page",
     "page_base": "npm run page_vue && npm run page_nuxt",
-    "page": "npm run copy && npm run page_base",
+    "page": "npm run copy && npm run page_base && node page",
+    "dev_page_vue": "cd ./demo/vue2-animatecss && npm run devpage",
+    "dev_page_nuxt": "cd ./demo/nuxt-animatecss && npm run devpage",
+    "dev_page_base": "npm run dev_page_vue && npm run dev_page_nuxt",
+    "devpage": "npm run copy && npm run dev_page_base && node page dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

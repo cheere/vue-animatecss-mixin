@@ -8,6 +8,7 @@
     "dev": "npm run copy development && npm run cli_serve",
     "docs": "node config/docs",
     "page": "npm run copy page && npm run cli_build_page",
+    "devpage": "npm run cli_build && npm run docs",
     "build": "npm run copy production && npm run cli_build",
     "cli_serve": "vue-cli-service serve",
     "cli_build": "vue-cli-service build",

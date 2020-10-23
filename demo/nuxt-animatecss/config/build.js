@@ -44,11 +44,12 @@ function runExec (runJs) {
 
 function runShellJS () {
   console.log('')
-  console.log('自定义脚本：')
-  console.log(chalk.blue('配置环境=>'), chalk.green(shellDeploy))
-  console.log(chalk.blue('Nuxt 打包=>'), chalk.green(shellOther))
+  console.log('Custom script：')
+  console.log(chalk.blue('Custom configuration environment=>'), chalk.green(shellDeploy))
+  console.log(chalk.blue('Custom Nuxt generate=>'), chalk.green(shellOther))
   console.log('')
-  console.log(chalk.red('自定义脚本，打包细节不展示, 最多2分钟, 耐心等待...'))
+  // console.log(chalk.red('自定义脚本，打包细节不展示, 最多2分钟, 耐心等待...'))
+  console.log(chalk.red('Custom script, package details do not show, up to 2 minutes, patience ...'))
   console.log('')
 
   // const distDict = join(__dirname, '../dist')

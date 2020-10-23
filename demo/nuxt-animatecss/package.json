@@ -12,6 +12,7 @@
     "start": "node config/dev && npm run start_development",
     "docs": "node config/docs",
     "page": "node config/build page generate && npm run docs",
+    "devpage": "npm run generate && npm run docs",
     "dev": "node config/dev && npm run dev_development",
     "dev_development": "nuxt",
     "start_development": "nuxt start",

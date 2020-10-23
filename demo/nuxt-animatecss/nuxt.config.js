@@ -20,6 +20,7 @@ const DateTime = new Date().getTime()
 const BuildFilenames = '[contenthash:7]_' + DateTime + '.[ext]'
 
 const IsPage = deploy === 'page'
+const isProd = deploy === "production";
 const RouterBase =
 IsPage 
 ? {
@@ -27,7 +28,13 @@ IsPage
       base: '/vue-animatecss-mixin/nuxt/'
     }
   }
-: {}
+: ( isProd 
+  ? {
+    router: {
+      base: '/nuxt/'
+    }
+  }
+  : {} )
 
 export default {
 
