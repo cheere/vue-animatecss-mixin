@@ -28,7 +28,8 @@ const shellOther = getArguments.splice(1).join(' ')
 let shellSet = 'set'
 
 function runExec (runJs) {
-  console.log('执行命令: ', runJs)
+  // console.log('执行命令: ', runJs)
+  console.log('Execute the order: ', runJs)
   const build = exec(runJs, {windowsHide: false}, (err, stdout, stderr) => {
     if (err) {
       consola.error(err)

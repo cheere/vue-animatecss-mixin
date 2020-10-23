@@ -115,6 +115,9 @@ export default {
   build: {
     sourceMap: false,
 
+    // 打包的默认路径为 ‘_nuxt’ 或者可以指定cdn 域名 https://nuxtjs.org/api/configuration-build#publicpath
+    publicPath: '/',
+
     // https://zh.nuxtjs.org/api/configuration-build/#filenames
     filenames: { // css 和 js  img 打包时指定文件夹、文件名
       app: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
