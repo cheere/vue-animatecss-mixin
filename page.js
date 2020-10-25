@@ -14,7 +14,6 @@ if (arg === 'dev') {
   hrefNuxt = '<div><a href="/nuxt" rel="noopener noopener">Nuxt demo</a></div>'
 }
 
-
 const tempHtml = join(__dirname, 'index.html')
 const docsHtml = join(__dirname, '/docs/index.html')
 
