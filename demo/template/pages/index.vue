@@ -7,8 +7,8 @@
         v-for="(item,i) in data"
         :key="'data_'+i"
         class="data"
-        @click="playKeynote"
         :class="item.className"
+        @click="playKeynote"
       >
         <div
           :data-animation="item.dataAnimation"
