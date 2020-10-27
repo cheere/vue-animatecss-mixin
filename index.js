@@ -1,5 +1,5 @@
 /*!
- * vue-animatecss-mixin - 1.0.1
+ * vue-animatecss-mixin - 1.0.2
  * (c) 2020 srxboys
  * Released under the MIT License.
  * https://github.com/cheere/vue-animatecss-mixin
@@ -129,10 +129,18 @@ const AnimateCssMixin = {
         const itemTarget = targets[i]
         const itemTargetEl = this.animateGetTarget(itemTarget)
         if (itemTargetEl && itemTargetEl.nodeType === 1) {
-          const animation = `animate__${itemTargetEl.getAttribute('data-animation')}`
-          if (animation && animation !== 'animate__null') {
+          const animation = `${itemTargetEl.getAttribute('data-animation')}`
+          if (animation && animation !== 'null') {
             this.animateAddEndListener(itemTargetEl)
-            itemTargetEl.classList.add('animate__animated', animation)
+            const animationClassList = animation.split(' ')
+            itemTargetEl.classList.add('animate__animated')
+            for (let i in animationClassList) {
+              const aniClassName = animationClassList[i]
+              if (aniClassName && typeof aniClassName === 'string' && aniClassName.length) {
+                const cn = 'animate__' + aniClassName
+                itemTargetEl.classList.add(cn)
+              }
+            }
           }
         }
       }

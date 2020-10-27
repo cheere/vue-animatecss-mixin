@@ -41,7 +41,7 @@ export default {
         {
           className: 'seekers',
           keynote: 'Attention seekers',
-          dataAnimation: 'heartBeat',
+          dataAnimation: 'heartBeat slower repeat-4 delay-1s',
           des: [
             'bounce',
             'flash',
@@ -61,7 +61,7 @@ export default {
         {
           className: 'entrances',
           keynote: 'Back entrances',
-          dataAnimation: 'backInUp',
+          dataAnimation: 'backInUp fast delay-1s',
           des: [
             'backInDown',
             'backInLeft',

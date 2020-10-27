@@ -31,6 +31,10 @@ or
 todo: need to improve...
 
 #### have to
+```html
+  <p data-animation="heartBeat slower repeat-4 delay-1s">I'm animate.css demo</p>
+```
+
 ```js
   beforeDestory() {
     this.animateRemoveAllListener(/*refs or targets*/)
@@ -51,7 +55,7 @@ or
 ```js
   mounted() {
     // ----------------get element-------------------
-    const target0 = this.animateGetTarget('.className')
+    const target0 = this.animateGetTarget(/* .className */)
 
     //-----------------play--------------------------
     this.animatePlayground([target0])
@@ -63,9 +67,9 @@ or
 ```js
   mounted() {
     // ----------------get element-------------------
-    const target0 = this.animateGetTarget('.className')
+    const target0 = this.animateGetTarget(/* .className */))
     // or
-    const target1 = this.animateGetTarget('#id')
+    const target1 = this.animateGetTarget(/* #id */))
     // or
     const target2 = this.animateGetTarget(/* ref */)
     // const target2 = ref
