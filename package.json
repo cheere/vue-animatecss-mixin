@@ -1,4 +1,3 @@
-
 {
   "name": "vue-animatecss-mixin",
   "version": "1.0.2",
@@ -22,6 +21,9 @@
     "----": "--------------------",
     "v": "node pack-version",
     "-----": "--------------------",
+    "lint": "eslint index.js",
+    "lint:st": "standard index.js",
+    "------": "--------------------",
     "test_dev_vue": "cd ./demo/vue2-animatecss && npm run test",
     "test_dev_nuxt": "cd ./demo/nuxt-animatecss && npm run test",
     "test_base": "npm run test_dev_vue && npm run test_dev_nuxt",
@@ -39,6 +41,13 @@
     "url": "git@github.com:cheere/vue-animatecss-mixin.git"
   },
   "devDependencies": {
-    "fs-extra": "*"
+    "eslint-config-standard": "^15.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "eslint": "*",
+    "fs-extra": "*",
+    "standard": "*"
   }
 }

@@ -134,8 +134,8 @@ const AnimateCssMixin = {
             this.animateAddEndListener(itemTargetEl)
             const animationClassList = animation.split(' ')
             itemTargetEl.classList.add('animate__animated')
-            for (let i in animationClassList) {
-              const aniClassName = animationClassList[i]
+            for (const j in animationClassList) {
+              const aniClassName = animationClassList[j]
               if (aniClassName && typeof aniClassName === 'string' && aniClassName.length) {
                 const cn = 'animate__' + aniClassName
                 itemTargetEl.classList.add(cn)
