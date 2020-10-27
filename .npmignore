@@ -2,4 +2,5 @@ demo
 docs
 node_modules
 index.html
+pack-version.js
 page.js

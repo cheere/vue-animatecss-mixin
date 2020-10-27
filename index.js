@@ -1,3 +1,9 @@
+/*!
+ * vue-animatecss-mixin - 1.0.1
+ * (c) 2020 srxboys
+ * Released under the MIT License.
+ * https://github.com/cheere/vue-animatecss-mixin
+ */
 
 /**
  * Animate.CSS
