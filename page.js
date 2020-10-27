@@ -6,10 +6,12 @@ const { removeSync } = require('fs-extra')
 const getArguments = process.argv.splice(2) || []
 const arg = String(getArguments)
 
+let hrefCss = '<link rel="stylesheet" type="text/css" href="/vue-animatecss-mixin/main.css" />'
 let hrefVue = '<div><a href="/vue-animatecss-mixin/vue" rel="noopener noopener">Vue demo</a></div>'
 let hrefNuxt = '<div><a href="/vue-animatecss-mixin/nuxt" rel="noopener noopener">Nuxt demo</a></div>'
 
 if (arg === 'dev') {
+  hrefCss = '<link rel="stylesheet" type="text/css" href="/main.css" />'
   hrefVue = '<div><a href="/vue" rel="noopener noopener">Vue demo</a></div>'
   hrefNuxt = '<div><a href="/nuxt" rel="noopener noopener">Nuxt demo</a></div>'
 }
@@ -20,7 +22,8 @@ const docsHtml = join(__dirname, '/docs/index.html')
 removeSync(docsHtml)
 
 const pageCode = fs.readFileSync(tempHtml, 'utf8')
-let lastCode = pageCode.replace(/tempVueCode/gm, hrefVue)
+let lastCode = pageCode.replace(/tempCssCode/gm, hrefCss)
+lastCode = lastCode.replace(/tempVueCode/gm, hrefVue)
 lastCode = lastCode.replace(/tempNuxtCode/gm, hrefNuxt)
 
 fs.writeFileSync(docsHtml, lastCode, 'utf8')

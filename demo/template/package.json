@@ -5,7 +5,7 @@
   "scripts": {
     "copy": "npm run copy_vue && npm run copy_nuxt ",
     "copy_vue": "node copyres vue",
-    "copy_nuxt": "node copyres vue"
+    "copy_nuxt": "node copyres nuxt"
   },
   "devDependencies": {
     "fs-extra": "*"
