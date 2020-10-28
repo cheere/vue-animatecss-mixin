@@ -1,3 +1,8 @@
+/**
+ * get package -> version
+ * to
+ * index.js(vue-animagecss-mixin -> animate-css.js)
+ */
 const {version} = require('./package.json')
 const fs = require('fs')
 const readline = require('readline');
@@ -5,7 +10,6 @@ const { join } = require('path')
 
 const jsPath = join(__dirname, 'index.js')
 const newVersion = ' * vue-animatecss-mixin - ' + version
-
 
 function read_line(path, callback) {
   var fRead = fs.createReadStream(path);

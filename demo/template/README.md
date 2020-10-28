@@ -1,4 +1,4 @@
-# Nuxt and Vue product template
+# Nuxt and Vue product `template`
 
 ```sh
   node copyres nuxt

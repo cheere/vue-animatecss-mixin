@@ -1,3 +1,8 @@
+/**
+ * copy root->index.html to docs
+ * and
+ * replace file content
+ */
 const fs = require('fs')
 const { join } = require('path')
 const { removeSync } = require('fs-extra')
@@ -21,7 +26,6 @@ const tempHtml = join(__dirname, 'index.html')
 const docsHtml = join(__dirname, '/docs/index.html')
 
 removeSync(docsHtml)
-
 
 const pageCode = fs.readFileSync(tempHtml, 'utf8')
 lastCode = pageCode.replace(/tempFavicon/gm, hrefFavicon)

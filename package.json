@@ -40,6 +40,9 @@
     "type": "git",
     "url": "git@github.com:cheere/vue-animatecss-mixin.git"
   },
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  },
   "devDependencies": {
     "eslint-config-standard": "^15.0.0",
     "eslint-plugin-import": "^2.22.1",

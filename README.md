@@ -4,7 +4,7 @@
 easy to use animate.css .
 
 ## DEMO
-https://cheere.github.io/vue-animatecss-mixin/
+online-preview https://cheere.github.io/vue-animatecss-mixin/
 
 ## install
 ```sh
