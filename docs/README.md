@@ -8,7 +8,7 @@ build
 
 update index.html
 ```sh
-  node page dev
+  node run devhtml
 ```
 
 ## GitHub - docs production (演示打包)
@@ -19,5 +19,5 @@ build
 
 update index.html
 ```sh
-  node page
+  npm run html
 ```
