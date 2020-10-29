@@ -2,6 +2,7 @@
   <div class="home">
     <h2 @click="goback">vue-animatecss-mixin demo</h2>
     <hr>
+    <div ref="tip" class="tip" data-animation="jackInTheBox" @click="playTip">ref animate.css</div>
     <div class="container">
       <div
         v-for="(item,i) in data"

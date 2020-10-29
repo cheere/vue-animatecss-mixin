@@ -12,6 +12,9 @@ const HomeAnimateMixin = {
   },
   mounted() {
     this.getAllAnimate()
+    setTimeout(() => {
+      this.playAll()
+    }, 400);
   },
   methods: {
     getAllAnimate() {
@@ -29,6 +32,11 @@ const HomeAnimateMixin = {
       const array = []
       this.animateForElement(root[0], array)
       this.animateEntrances = array
+    },
+    playAll(){
+      this.playTip()
+      this.playSeekersAnimate()
+      this.playEntrancesAnimate()
     },
     playKeynote(event) {
       let loop = true
@@ -58,6 +66,10 @@ const HomeAnimateMixin = {
     },
     playTarget(event) {
       const target = event.target
+      this.animatePlayground([target])
+    },
+    playTip() {
+      const target = this.$refs.tip
       this.animatePlayground([target])
     }
   }
