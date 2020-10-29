@@ -14,7 +14,7 @@ const AnimateCssMixin = {
     /**
      * Monitor the animation finish.
      * 动画对象 添加 监听 动画播放完毕
-     * @param {Object} target animation object(动画对象)
+     * @param {object} target animation object(动画对象)
      */
     animateAddEndListener(target) {
       target.addEventListener('animationend', () => {
@@ -37,7 +37,7 @@ const AnimateCssMixin = {
     /**
      * Remove monitor animation, play finished
      * 移除监听
-     * @param {Object} target animation object(动画对象)
+     * @param {object} targets animation objects(动画对象)
      */
     animateRemoveAllListener(targets) {
       if (!targets || !Array.isArray(targets)) {
@@ -53,7 +53,7 @@ const AnimateCssMixin = {
 
     /**
      * loop get DOM.node
-     * @param {Object} target animation object(动画对象)
+     * @param {object} target animation object(动画对象)
      * @param {Function} callback
      */
     animateChildNodes(target, callback) {
@@ -72,7 +72,7 @@ const AnimateCssMixin = {
     
     /**
      * loop get animate object
-     * @param {Object} target animation object(动画对象)
+     * @param {object} target animation object(动画对象)
      * @param {Array} array
      */
     animateForElement(target, array) {
@@ -90,7 +90,7 @@ const AnimateCssMixin = {
     /**
      * get animation object
      * 获取对象(id 、 class、ref)
-     * @param {Any<string/Object>} target animation object(动画对象)
+     * @param {Any} target animation object(动画对象)
      */
     animateGetTarget(target) {
       if (!target) {
@@ -122,7 +122,7 @@ const AnimateCssMixin = {
 
     /**
      * play animation
-     * @param {Array<String>} target animation Array(动画对象数组)
+     * @param {Array<string>} targets animation Array(动画对象数组)
      */
     animatePlayground(targets = []) {
       for (let i = 0; i < targets.length; i++) {
@@ -134,8 +134,8 @@ const AnimateCssMixin = {
             this.animateAddEndListener(itemTargetEl)
             const animationClassList = animation.split(' ')
             itemTargetEl.classList.add('animate__animated')
-            for (let i in animationClassList) {
-              const aniClassName = animationClassList[i]
+            for (const j in animationClassList) {
+              const aniClassName = animationClassList[j]
               if (aniClassName && typeof aniClassName === 'string' && aniClassName.length) {
                 const cn = 'animate__' + aniClassName
                 itemTargetEl.classList.add(cn)
