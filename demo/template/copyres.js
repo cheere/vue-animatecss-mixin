@@ -45,7 +45,6 @@ console.log('process.argv=>', process.argv)
 const getArguments = process.argv.splice(2) || []
 const arg = String(getArguments)
 
-
 const fromAssets = join(__dirname, 'assets')
 const fromComponent = join(__dirname, 'component')
 const fromMixins = join(__dirname, 'mixins')
@@ -109,7 +108,6 @@ copyArrayPath.forEach(e => {
   console.log('copy path =>', from, ' || to=>', to)
   copySync(from, to)
 })
-
 
 if (arg === 'vue') {
   fs.mkdirSync(targetPage)
