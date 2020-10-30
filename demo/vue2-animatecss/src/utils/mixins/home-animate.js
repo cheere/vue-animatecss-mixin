@@ -38,6 +38,10 @@ const HomeAnimateMixin = {
       this.playSeekersAnimate()
       this.playEntrancesAnimate()
     },
+    playTip() {
+      const target = this.$refs.tip
+      this.animatePlayground([target])
+    },
     playKeynote(event) {
       let loop = true
       let target = event.target
@@ -68,9 +72,14 @@ const HomeAnimateMixin = {
       const target = event.target
       this.animatePlayground([target])
     },
-    playTip() {
-      const target = this.$refs.tip
-      this.animatePlayground([target])
+    playBtn(event) {
+      const target = event.target
+      const className = target.className || ''
+      if (className.indexOf('isPlaying') > -1) {
+        this.animateRemoveClass(target)
+      } else {
+        this.animatePlayground([target])
+      }
     }
   }
 }

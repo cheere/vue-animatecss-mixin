@@ -12,17 +12,25 @@
 const AnimateCssMixin = {
   methods: {
     /**
-     * Monitor the animation finish.
-     * 动画对象 添加 监听 动画播放完毕
+     * remove animation.
+     * 移除动画
+     * [v1.0.3]
      * @param {object} target animation object(动画对象)
      */
-    animateAddEndListener(target) {
-      target.addEventListener('animationend', () => {
+    animateRemoveClass(target) {
+      if (!(target && typeof target === 'object')) {
+        console.error('animateRemoveClass target not Dom node')
+        return
+      }
+      const targetDomType = target.nodeType || 0
+      if (targetDomType === 1) {
         const classList = target.classList || []
         const newList = []
         for (let i = 0; i < classList.length; i++) {
           const name = classList[i]
           if (!name) {
+            continue
+          } else if (name === 'isPlaying') { // [v1.0.3] remove class status
             continue
           } else if (name.length > 6 && name.substring(0, 7) === 'animate') {
             continue
@@ -31,6 +39,17 @@ const AnimateCssMixin = {
         }
         target.classList = newList
         target.classList.value = newList.join(' ')
+      }
+    },
+
+    /**
+     * Monitor the animation finish.
+     * 动画对象 添加 监听 动画播放完毕
+     * @param {object} target animation object(动画对象)
+     */
+    animateAddEndListener(target) {
+      target.addEventListener('animationend', () => {
+        this.animateRemoveClass(target)
       })
     },
 
@@ -41,14 +60,20 @@ const AnimateCssMixin = {
      */
     animateRemoveAllListener(targets) {
       if (!targets || !Array.isArray(targets)) {
+        console.error('animateRemoveAllListener target not Dom nodeArray')
         return
       }
       targets.forEach(element => {
-        element.removeEventListener('animationend')
+        this.animateRemoveListener(element)
       });
     },
     animateRemoveListener(target) {
+      if (!(target && typeof target === 'object' && target.nodeType === 1)) {
+        console.error('animateRemoveListener target not Dom node')
+        return
+      }
       target.removeEventListener('animationend')
+      this.animateRemoveClass(target)
     },
 
     /**
@@ -113,10 +138,10 @@ const AnimateCssMixin = {
         if (target.nodeType === 1) {
           return target
         } else {
-          throw new TypeError('animateGetTarget target.nodeType !== 1')
+          console.error('animateGetTarget target.nodeType !== 1')
         }
       } else {
-        throw new TypeError('animateGetTarget target allow string/object')
+        console.error('animateGetTarget target allow string/object')
       }
     },
 
@@ -131,20 +156,43 @@ const AnimateCssMixin = {
         if (itemTargetEl && itemTargetEl.nodeType === 1) {
           const animation = `${itemTargetEl.getAttribute('data-animation')}`
           if (animation && animation !== 'null') {
-            this.animateAddEndListener(itemTargetEl)
-            const animationClassList = animation.split(' ')
-            itemTargetEl.classList.add('animate__animated')
-            for (const j in animationClassList) {
-              const aniClassName = animationClassList[j]
-              if (aniClassName && typeof aniClassName === 'string' && aniClassName.length) {
-                const cn = 'animate__' + aniClassName
-                itemTargetEl.classList.add(cn)
-              }
-            }
+            this.animateSetAnimation(itemTargetEl, animation)
           }
         }
       }
     },
+
+    /**
+     * Set Animate.css animation
+     * [v1.0.3]
+     * @param {object} target animation object(动画对象)
+     * @param {String<Array>} dataAnimations classList
+     */
+    animateSetAnimation(target, dataAnimations = '') {
+      if (!(target && typeof target === 'object' && target.nodeType === 1)) {
+        console.error('animateRemoveClass target not Dom node')
+        return
+      }
+      
+      const animationClassList = dataAnimations.split(' ')
+      
+      let flag = false
+      for (const j in animationClassList) {
+        const aniClassName = animationClassList[j]
+        if (aniClassName && typeof aniClassName === 'string' && aniClassName.length) {
+          const cn = 'animate__' + aniClassName
+          target.classList.add(cn)
+          flag = true
+        }
+      }
+      
+      if (flag) {
+        this.animateAddEndListener(target)
+        
+        target.classList.add('animate__animated')
+        target.classList.add('isPlaying')
+      }
+    }
   }
 }
 

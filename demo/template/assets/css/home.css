@@ -6,3 +6,7 @@
 .home .container .data .title {text-align: center; padding: 15px 0px; font-weight: 700;}
 .home .container .content {display: flex; flex-wrap: wrap;}
 .home .container .content .des {display: block; padding: 10px; background-color: white; margin: 10px; border-radius: 4px;}
+
+.home .bottom {margin: 20px;}
+.home .bottom .list {display: flex; flex-wrap: wrap;}
+.home .bottom .list .btns {margin-right: 10px; margin-top: 10px; padding:5px 30px; display: block; background-color: orange; border-radius: 10px; text-align: center;}

@@ -28,6 +28,15 @@
         </div>
       </div>
     </div>
+
+    <div class="bottom">
+      <p class="tip">the button vibrates infinitely (按钮无限抖动)</p>
+      <div class="list">
+        <div class="btns cursor" data-animation="headShake infinite" @click.stop="playBtn">headShake-btn</div>
+        <div class="btns cursor" data-animation="shakeY infinite" @click.stop="playBtn">shakeY-btn</div>
+      </div>
+    </div>
+
   </div>
 </template>
 
